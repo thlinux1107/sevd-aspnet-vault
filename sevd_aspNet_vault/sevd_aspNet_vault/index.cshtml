@@ -1,0 +1,59 @@
+﻿@using System.Linq
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pg 1 - SEVD Sample</title>
+</head>
+
+<!--
+
+    DESCRIPTION:
+        This is a sample integration to the Sage Exchange Virtual Desktop (SEVD).
+        The SEVD is a Sage-hosted interface for credit card and ACH payments. By
+        collecting credit card information on our servers, your own site avoids
+        the PCI compliance requirements associated with "touching" credit card
+        data.
+
+    TECHNICAL:
+        .NET version 4.5
+        Razor version 3
+
+    SUPPORT:
+        We've done our best to add comments throughout these files. That said, it is
+        not possible to exhaustively anticipate and address every potential scenario
+        that may arise! Please email sdksupport@sage.com for assistance integrating to
+        the SEVD, or any other questions involving third-party integrations to the
+        Sage Payment Solutions gateway. Any code snippets, logs, responses, etc.
+        that you can provide make troubleshooting much easier, and are appreciated.
+
+    TERMS OF USE:
+        This sample was created for demonstrative purposes only. Please do not provide
+        these files, their content, SEVD documentation, or any other relevant material
+        to any parties not directly involved with your integration.
+
+    ABOUT US:
+        Hi! We are your friendly Integration Consultants at Sage Payment Solutions.
+        You can reach us by email at sdksupport@sage.com. Please don't hesitate
+        to contact us.
+
+-->
+
+<body>
+
+    <h3>Vault Transaction:</h3>
+
+    <!--
+        There's nothing particularly interesting happening here -- just a typical HTML form
+        collecting customer information and passing it on.
+    -->
+
+    <form method="POST" action="request.cshtml">
+        <label>Merchant ID: <input type="text" name="MerchantID" value="173859436515"></label><br />
+        <label>Merchant Key: <input type="text" name="MerchantKey" value="P1J2V8P2Q3D8"></label><br />
+        <label>Vault ID: <input type="text" name="VaultID" value="2341234-12431243-2341235"></label><br />
+        <input type="submit" value="Submit" /><br />
+    </form>
+
+</body>
+</html>
